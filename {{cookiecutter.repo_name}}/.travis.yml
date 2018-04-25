@@ -25,10 +25,10 @@ matrix:
     - env: TOX_ENV=py36-django-master{% endif %}
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -r requirements_test.txt
+install: pipenv install --dev
 
 # command to run tests using coverage, e.g. python setup.py test
-script: tox -e $TOX_ENV
+script: pipenv run tox -e $TOX_ENV
 
 after_success:
-  - codecov -e TOX_ENV
+  - pipenv run codecov -e TOX_ENV

@@ -28,32 +28,32 @@ clean-pyc: ## remove Python file artifacts
 	find . -name '*~' -exec rm -f {} +
 
 lint: ## check style with flake8
-	flake8 {{ cookiecutter.app_name }} tests
+	pipenv run flake8 {{ cookiecutter.app_name }} tests
 
 test: ## run tests quickly with the default Python
-	python runtests.py tests
+	pipenv run python runtests.py tests
 
 test-all: ## run tests on every Python version with tox
-	tox
+	pipenv run tox
 
 coverage: ## check code coverage quickly with the default Python
-	coverage run --source {{ cookiecutter.app_name }} runtests.py tests
-	coverage report -m
-	coverage html
+	pipenv run coverage run --source {{ cookiecutter.app_name }} runtests.py tests
+	pipenv run coverage report -m
+	pipenv run coverage html
 	open htmlcov/index.html
 
 docs: ## generate Sphinx HTML documentation, including API docs
 	rm -f docs/{{ cookiecutter.repo_name }}.rst
 	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ {{ cookiecutter.app_name }}
+	pipenv run sphinx-apidoc -o docs/ {{ cookiecutter.app_name }}
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 	$(BROWSER) docs/_build/html/index.html
 
 release: clean ## package and upload a release
-	python setup.py sdist upload
-	python setup.py bdist_wheel upload
+	pipenv run python setup.py sdist upload
+	pipenv run python setup.py bdist_wheel upload
 
 sdist: clean ## package
-	python setup.py sdist
+	pipenv run python setup.py sdist
 	ls -l dist

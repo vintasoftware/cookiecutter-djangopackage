@@ -66,7 +66,9 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.repo_name }}` for loc
 
     $ mkvirtualenv {{ cookiecutter.repo_name }}
     $ cd {{ cookiecutter.repo_name }}/
-    $ python setup.py develop
+    $ [sudo] pip install pipenv
+    $ pipenv install --dev
+    $ pipenv run python setup.py develop
 
 4. Create a branch for local development::
 
@@ -77,11 +79,11 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.repo_name }}` for loc
 5. When you're done making changes, check that your changes pass flake8 and the
    tests, including testing other Python versions with tox::
 
-        $ flake8 {{ cookiecutter.app_name }} tests
-        $ python setup.py test
+        $ pipenv run flake8 {{ cookiecutter.app_name }} tests
+        $ pipenv run python setup.py test
         $ make test-all
 
-   To get flake8 and tox, just pip install them into your virtualenv.
+   To get flake8 and tox, just pipenv install them into your virtualenv.
 
 6. Commit your changes and push your branch to GitHub::
 
@@ -109,4 +111,4 @@ Tips
 
 To run a subset of tests::
 
-    $ python runtests.py tests.test_{{ cookiecutter.app_name }}
+    $ pipenv run python runtests.py tests.test_{{ cookiecutter.app_name }}
