@@ -12,7 +12,9 @@ coverage = "==4.4.1"
 codecov = ">=2.0.0"
 {% if cookiecutter.models != "Comma-separated list of models" %}django-model-utils = ">=2.0"{% endif %}
 ipython = "*"
+isort = "*"
 mock = ">=1.0.1"
+pre-commit = "*"
 prospector = {git = "https://github.com/vintasoftware/prospector.git", ref="0a63f2b", extras = ["with-vulture"]}
 pylint = "*"
 wheel = "==0.30.0"

@@ -91,6 +91,14 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.repo_name }}` for loc
     $ git commit -m "Your detailed description of your changes."
     $ git push origin name-of-your-bugfix-or-feature
 
+   Before every commit, pre-commit runs some checks to make sure the changes are according
+   to the project's code style.
+
+   If, for some reason, you need to commit without running the checks, you can skip them by
+   using a -n flag::
+
+    $ git commit -m "Your detailed description of your changes." -n
+
 7. Submit a pull request through the GitHub website.
 
 Pull Request Guidelines
