@@ -27,8 +27,8 @@ clean-pyc: ## remove Python file artifacts
 	find . -name '*.pyo' -exec rm -f {} +
 	find . -name '*~' -exec rm -f {} +
 
-lint: ## check style with flake8
-	pipenv run flake8 {{ cookiecutter.app_name }} tests
+lint: ## check style with prospector
+	pipenv run prospector
 
 test: ## run tests quickly with the default Python
 	pipenv run python runtests.py tests

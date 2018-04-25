@@ -11,9 +11,10 @@ bumpversion = "==0.5.3"
 coverage = "==4.4.1"
 codecov = ">=2.0.0"
 {% if cookiecutter.models != "Comma-separated list of models" %}django-model-utils = ">=2.0"{% endif %}
-flake8 = ">=2.1.0"
 ipython = "*"
 mock = ">=1.0.1"
+prospector = {git = "https://github.com/vintasoftware/prospector.git", ref="0a63f2b", extras = ["with-vulture"]}
+pylint = "*"
 wheel = "==0.30.0"
 tox = "<=2.9.1"
 tox-pipenv = "<=1.4.1"
