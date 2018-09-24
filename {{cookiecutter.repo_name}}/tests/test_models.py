@@ -13,7 +13,7 @@ from django.test import TestCase
 from {{ cookiecutter.app_name }} import models
 
 
-class Test{{ cookiecutter.app_name|capitalize }}(TestCase):
+class {{ cookiecutter.app_name|capitalize }}Tests(TestCase):
 
     def setUp(self):
         pass
