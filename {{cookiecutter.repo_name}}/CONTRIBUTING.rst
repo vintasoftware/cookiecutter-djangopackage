@@ -74,10 +74,10 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.repo_name }}` for loc
 
    Now you can make your changes locally.
 
-5. When you're done making changes, check that your changes pass flake8 and the
+5. When you're done making changes, check that your changes pass prospector and the
    tests, including testing other Python versions with tox::
 
-        $ flake8 {{ cookiecutter.app_name }} tests
+        $ prospector
         $ python setup.py test
         $ make test-all
 
