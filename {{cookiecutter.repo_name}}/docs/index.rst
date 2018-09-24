@@ -16,4 +16,4 @@ Contents:
    usage
    contributing
    authors
-   history
+   changelog

@@ -49,3 +49,6 @@ docs/_build
 # Private deps
 requirement/private.in
 requirement/private.txt
+
+# Visual Studio Code
+.vscode
