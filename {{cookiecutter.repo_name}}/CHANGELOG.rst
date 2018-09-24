@@ -1,7 +1,7 @@
 .. :changelog:
 
-History
--------
+Change Log
+----------
 
 {{ cookiecutter.version }} ({% now 'local' %})
 ++++++++++++++++++
