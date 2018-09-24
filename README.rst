@@ -102,7 +102,8 @@ Code has been written, but does it actually work? Let's find out!
 ::
 
     source <YOURVIRTUALENV>/bin/activate
-    (myenv) $ pip install -r requirements_test.txt
+    (myenv) $ make upgrade
+    (myenv) $ pip install -r requirements/test.txt
     (myenv) $ python runtests.py
 
 Setting up Travis
