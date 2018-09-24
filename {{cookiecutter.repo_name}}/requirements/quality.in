@@ -1,0 +1,3 @@
+# Requirements for code quality checks
+
+flake8>=2.1.0             # linter for python

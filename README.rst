@@ -40,7 +40,7 @@ Now, get Cookiecutter_. Trust me, it's awesome::
 
 Now run it against this repo::
 
-    $ cookiecutter gh:pydanny/cookiecutter-djangopackage.git
+    $ cookiecutter gh:pydanny/cookiecutter-djangopackage
 
 You'll be prompted for some questions, answer them, then it will create a directory that is your new package.
 
@@ -102,7 +102,8 @@ Code has been written, but does it actually work? Let's find out!
 ::
 
     source <YOURVIRTUALENV>/bin/activate
-    (myenv) $ pip install -r requirements_test.txt
+    (myenv) $ make upgrade
+    (myenv) $ pip install -r requirements/test.txt
     (myenv) $ python runtests.py
 
 Setting up Travis
