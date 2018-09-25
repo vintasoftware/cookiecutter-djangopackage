@@ -24,8 +24,10 @@ Features
 * Codecov configuration
 * Tox configuration
 * Sphinx Documentation
-* BSD licensed by default
+* Vinta's MIT licensed by default
 * Basic model generation
+* [Pip-tools](https://github.com/jazzband/pip-tools/) for dependencies management
+* Initial setup for code quality tools like [prospector](https://github.com/PyCQA/prospector) and [pre-commit](https://github.com/pre-commit/pre-commit)
 
 Usage
 -----
@@ -70,11 +72,8 @@ It prompts you for information that it uses to create the app, with defaults in 
     version [0.1.0]:
     create_example_project [N]:
     Select open_source_license:
-    1 - MIT
-    2 - BSD
-    3 - ISCL
-    4 - Apache Software License 2.0
-    5 - Not open source
+    1 - Vinta's MIT
+    2 - Not open source
     Choose from 1, 2, 3, 4, 5 [1]:
 
 Enter the project and take a look around::
@@ -160,16 +159,3 @@ Add to Django Packages
 
 Once you have a release, and assuming you have an account there,
 just go to https://www.djangopackages.com/packages/add/ and add it there.
-
-Follows Best Practices
-~~~~~~~~~~~~~~~~~~~~~~
-
-.. image:: https://cdn.shopify.com/s/files/1/0304/6901/products/2017-06-29-tsd11-sticker-02_medium.png?v=1523456754
-   :name: Two Scoops Logo
-   :align: center
-   :alt: Two Scoops of Django
-   :target: http://twoscoopspress.org/products/two-scoops-of-django-1-11
-
-This project follows best practices as espoused in `Two Scoops of Django: Best Practices for Django 1.11`_.
-
-.. _`Two Scoops of Django: Best Practices for Django 1.11`: http://twoscoopspress.org/products/two-scoops-of-django-1-11
