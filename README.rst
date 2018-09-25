@@ -26,8 +26,12 @@ Features
 * Sphinx Documentation
 * Vinta's MIT licensed by default
 * Basic model generation
-* [Pip-tools](https://github.com/jazzband/pip-tools/) for dependencies management
-* Initial setup for code quality tools like [prospector](https://github.com/PyCQA/prospector) and [pre-commit](https://github.com/pre-commit/pre-commit)
+* `Pip-tools`_ for dependencies management
+* Initial setup for code quality tools like `Prospector`_ and `pre-commit`_
+
+.. _Pip-tools: https://github.com/jazzband/pip-tools/
+.. _Prospector: https://github.com/PyCQA/prospector
+.. _pre-commit: https://github.com/pre-commit/pre-commit
 
 Usage
 -----
