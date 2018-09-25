@@ -9,23 +9,21 @@ from django.views.generic import (
 )
 
 from .models import ({% for model in cookiecutter.models.split(',') %}
-	{{ model.strip() }},{% endfor %}
+    {{ model.strip() }},{% endfor %}
 )
 
 {% set views = [
-	'CreateView',
-	'DeleteView',
-	'DetailView',
-	'UpdateView',
-	'ListView'
+    'CreateView',
+    'DeleteView',
+    'DetailView',
+    'UpdateView',
+    'ListView'
 ] -%}
 
 {% for model in cookiecutter.models.split(',') -%}
 {% for view in views %}
 class {{ model.strip() }}{{ view }}({{ view }}):
-
-    model = {{ model.strip() }}
-
+    model = {{ model.strip() }}{{ '\n' if not loop.last else '' }}
 {% endfor -%}
-{% endfor -%}
+{{ '\n' if not loop.last else '' }}{% endfor -%}
 {% endif -%}

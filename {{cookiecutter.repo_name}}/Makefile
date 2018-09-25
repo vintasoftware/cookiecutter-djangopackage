@@ -28,7 +28,7 @@ clean-pyc: ## remove Python file artifacts
 	find . -name '*~' -exec rm -f {} +
 
 lint: ## check style with flake8
-	flake8 {{ cookiecutter.app_name }} tests
+	prospector
 
 test: ## run tests quickly with the default Python
 	python runtests.py tests
